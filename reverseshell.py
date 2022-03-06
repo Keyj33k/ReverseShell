@@ -1,7 +1,6 @@
 #!/usr/bin/env
 from subprocess import run
 import os 
-
 while True:
 
     def persistence_job():
