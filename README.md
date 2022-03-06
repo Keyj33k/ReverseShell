@@ -17,9 +17,9 @@ cd ReverseShell
 ```
 ## You will found a file called >> reverseshell.py:
 
-Now you need to change the ip in the script.
+- Now you need to change the ip in the script.
 
-After saving your settings you can test it:
+## After saving your settings you can test it:
 
 - On the attacker machine:
 ```
