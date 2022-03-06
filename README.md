@@ -1,7 +1,6 @@
 ## ReverseShell | written in python3
 
-- A python backdoor/reverseshell.
-- You need to change the ip for your own usage.
+- A python backdoor/reverseshell for linux.
 
 ![backd](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
