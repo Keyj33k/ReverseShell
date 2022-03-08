@@ -48,4 +48,6 @@ Note:
 - Don't hack anyone without their permissions.
 - With great force follows great responsibility.
 # Thank you
+![Twitter](https://img.shields.io/badge/<twitter>-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) https://twitter.com/keyjeek
+
 
