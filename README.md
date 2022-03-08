@@ -24,8 +24,15 @@ cd ReverseShell
 ```
 nc -lnvp 5003
 ```
+- or use the silentHill listener:
+```
+python3 silentHill.py
+```
 - On the vivtim machine:
 ```
 python3 reverseshell.py &
 ```
+# Explained:
+
+![listener](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/reverseshell.jpeg)
 
