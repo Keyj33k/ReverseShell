@@ -40,4 +40,6 @@ Note:
 - This tool is only for educational purposes. 
 - I'm not responsible for your actions. 
 - With great force follows great responsibility.
+- Don't hack anyone without their permissions.
+# Thank you
 
