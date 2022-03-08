@@ -16,9 +16,8 @@ cd ReverseShell
 ```
 
 Or download the zip:
-```
-https://github.com/Keyj33k/ReverseShell/archive/refs/heads/main.zip
-```
+- https://github.com/Keyj33k/ReverseShell/archive/refs/heads/main.zip
+
 ## You will found a file called >> reverseshell.py:
 
 - Now you need to change the ip in the script.
