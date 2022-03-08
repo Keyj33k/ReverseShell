@@ -36,5 +36,7 @@ python3 reverseshell.py &
 
 ![listener](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/reverseshell.jpeg)
 
-
+Note:
+- This tool is only for educational purposes. 
+- I'm not responsible for your actions. With great force follows great responsibility
 
