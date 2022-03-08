@@ -38,5 +38,6 @@ python3 reverseshell.py &
 
 Note:
 - This tool is only for educational purposes. 
-- I'm not responsible for your actions. With great force follows great responsibility
+- I'm not responsible for your actions. 
+- With great force follows great responsibility.
 
