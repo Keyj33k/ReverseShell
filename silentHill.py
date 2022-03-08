@@ -6,13 +6,13 @@ class silentHill:
         self.LISTEN_PORT = int(4444)
         import socket
         try:
-            sock = socket.socket()
-            sock.bind((self.LISTEN_ADDRESS, self.LISTEN_PORT))
-            sock.listen(1)
+            SOCKET_SOCK = socket.socket()
+            SOCKET_SOCK.bind((self.LISTEN_ADDRESS, self.LISTEN_PORT))
+            SOCKET_SOCK.listen(1)
             print(f"[*] Listening on {self.LISTEN_ADDRESS}:{self.LISTEN_PORT}")
-            client = sock.accept()
+            client = SOCKET_SOCK.accept()
             print(f"[*] Client connected {client[1]}")
-            sock.close()
+            SOCKET_SOCK.close()
         
         except Exception as ERROR:
             from termcolor import colored
