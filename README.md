@@ -1,8 +1,6 @@
 # ReverseShell | Written In <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge"/></a>
 - A python backdoor/reverseshell for linux.
----
-![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
----
+
 ![backd](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
 ## How to use?
@@ -49,6 +47,10 @@ Note:
 - I'm not responsible for your actions. 
 - Don't hack anyone without their permissions.
 - With great force follows great responsibility.
+
+---
+![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
+---
 
 # Thank you
 <div id="badges">
