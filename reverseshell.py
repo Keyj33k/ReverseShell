@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# coded by @Keyj33k
+
 from subprocess import run
 import os 
 
