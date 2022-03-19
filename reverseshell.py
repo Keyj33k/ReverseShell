@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-# coded by @Keyj33k
+
+# # # # # # # # # # # # # # # # # # # # # #
+#                                         #
+#   Author  :   Keyj33k                   #
+#   Contact :   nomotikag33n@gmail.com    #
+#   Twitter :   @keyjeek                  #
+#   Github  :   @keyj33k                  #
+#   Version :   1.0.0                     #
+#                                         #
+# # # # # # # # # # # # # # # # # # # # # # 
 
 from subprocess import run
 import os 
