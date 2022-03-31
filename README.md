@@ -1,5 +1,6 @@
 # ReverseShell | Written In <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge"/></a>
 - A python backdoor/reverseshell for linux.
+- shell.py is the single reverseshell without cronjob and chattr function
 
 ![backd](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
