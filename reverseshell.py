@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from subprocess import run # used for interacting with bash
 import os 
 
