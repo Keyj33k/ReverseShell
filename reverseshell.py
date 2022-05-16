@@ -59,13 +59,22 @@ if __name__ == "__main__":
         2
     )
 
-    # if you have any issues try: comment line 41 out and uncommend line 42
     run(
         [
-            "/bin/bash",
+            "/bin/bash", 
             "-i"
         ]
-    )  # finally run the bash console
-    # run(["/bin/bash"], shell=True)
+    ) # finally run the bash console
+    
+    """
+    
+    Try this code below if you have any issues.
+    
+    run(
+        ["/bin/bash"], 
+        shell=True
+    )
+    
+    """
 
     
