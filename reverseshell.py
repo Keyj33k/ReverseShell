@@ -2,7 +2,6 @@
 from subprocess import run
 import os
 
-
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
 #   Author  :   Keyj33k                   #
@@ -22,7 +21,7 @@ class shell:
             target_port
     ):  # assign the target address and the target port
         self.target_address = target_address
-        self.target_port = target_port
+        self.target_port    = target_port
 
 
 reverse_connection = shell(
