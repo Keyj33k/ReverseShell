@@ -6,9 +6,7 @@ import os
 #                                         #
 #   Author  :   Keyj33k                   #
 #   Contact :   nomotikag33n@gmail.com    #
-#   Twitter :   @keyjeek                  #
 #   Github  :   @keyj33k                  #
-#   Insta   :   @keyjeek                  #
 #   Version :   1.0.4                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
