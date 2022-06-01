@@ -21,7 +21,7 @@ class Shell:
     ): 
         
         self.target_address = target_address
-        self.target_port = target_port
+        self.target_port    = target_port
 
     def shell(self):
         socket_sock = socket.socket(
