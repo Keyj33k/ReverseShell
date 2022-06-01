@@ -40,7 +40,7 @@ class Shell:
             target_port
     ):  # assign the target address and the target port
         self.target_address = target_address
-        self.target_port = target_port
+        self.target_port    = target_port
 
 
 if __name__ == "__main__":
