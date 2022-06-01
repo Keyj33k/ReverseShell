@@ -24,7 +24,6 @@ class Shell:
         self.target_port = target_port
 
     def shell(self):
-        # Change socket.SOCK_STREAM(TCP) to socket.SOCK_DRAM for UDP connection
         socket_sock = socket.socket(
             socket.AF_INET,  # use ipv4(AF_INET) and tcp(SOCK_STREAM) for the connection
             socket.SOCK_STREAM
