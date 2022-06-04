@@ -4,7 +4,7 @@
 
 ![backd](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
-## How to use?
+## How to use:snake:?
 
 Clone the repo:
 ```
