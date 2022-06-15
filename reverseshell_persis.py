@@ -13,7 +13,7 @@ import os
 #   Author  :   Keyjeek                   #
 #   Contact :   nomotikag33n@gmail.com    #
 #   Github  :   @Keyj33k                  #
-#   Version :   1.0.5                     #
+#   Version :   1.0.6                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
