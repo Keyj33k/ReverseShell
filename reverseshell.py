@@ -48,21 +48,19 @@ class Shell:
                 2
             )
 
-            run(
-                [
+            run([
                     "/bin/bash",
                     "-i"
-                ]
-            )
+            ])
 
             """
+            
             Try this code below if you have any issues.
-            run(
-                [
+            run([
                     "/bin/bash"
-                ], 
-                shell=True
+                ], shell=True
             )
+            
             """
 
 
