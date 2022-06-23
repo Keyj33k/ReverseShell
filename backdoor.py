@@ -122,7 +122,7 @@ class Shell:
                 
                 subprocess.call([
                     "chmod", 
-                    "+x", 
+                    "777", 
                     self.persis_path
                 ])
         
