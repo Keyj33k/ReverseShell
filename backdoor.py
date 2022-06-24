@@ -111,7 +111,7 @@ class Shell:
                 self.persis_path, 
                 "w"
             ) as persis_file:
-                persis_file.write("#!/bin/bash\n#\n# rc.local\n#\n# This script is executed at the end of each multiuser runlevel.\n# Make sure that the script will 'exit 0' on success or any other\n# value on error.\n#\n# In order to enable or disable this script just change the execution\n# bits.\n#\n# By default this script does nothing.\n")
+                persis_file.write("#!/bin/bash\n#\n# rc.local\n#\n# This script is executed at the end of each multiuser runlevel.\n# Make sure that the script will 'exit 0' on success or any other\n# value on error.\n#\n# In order to enable or disable this script just change the execution\n# bits.\n#\n# By default this script does nothing.\n\nsleep 1.5\n\n")
             
             if os.path.isfile(self.persis_path):
                 with open(
@@ -122,8 +122,14 @@ class Shell:
                 
                 subprocess.call([
                     "chmod", 
-                    "777", 
-                    self.persis_path
+                    "+x", 
+                    "/etc/rc.local"
+                ])
+
+                subprocess.call([
+                    "systemctl",
+                    "enable",
+                    "rc-local.service"
                 ])
         
         else:
@@ -135,8 +141,14 @@ class Shell:
                 
             subprocess.call([
                 "chmod", 
-                "777", 
-                self.persis_path
+                "+x", 
+                "/etc/rc.local"
+            ])
+
+            subprocess.call([
+                "systemctl",
+                "start",
+                "rc-local.service"
             ])
 
 
