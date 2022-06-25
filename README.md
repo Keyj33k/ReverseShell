@@ -3,7 +3,7 @@
 
 ![revsh](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
-## How to use:snake:?
+## How to use this reverseshell?:snake:
 
 Clone the repo:
 ```
