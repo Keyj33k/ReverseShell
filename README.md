@@ -10,12 +10,11 @@ Clone the repo:
 git clone https://github.com/Keyj33k/ReverseShell.git
 ```
 - Now you need to navigate to the ReverseShell directory.
+- You will find a file called >> reverseshell.py:
 
-## You will find a file called >> reverseshell.py:
+- IMPORTANT: You need to change the ipv4 address in the script.
 
-- You need to change the ipv4 address in the script.
-
-## After saving your settings you can test it:
+### After saving your settings you can test it:
 
 - On the attacker machine:
 ```
