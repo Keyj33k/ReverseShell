@@ -12,7 +12,8 @@ git clone https://github.com/Keyj33k/ReverseShell.git
 - Now you need to navigate to the ReverseShell directory.
 - You will find a file called >> reverseshell.py:
 
-- IMPORTANT: You need to change the ipv4 address in the script.
+- IMPORTANT: You need to change the ipv4 address in the script:
+![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revshipchge.png?raw=true)
 
 ### After saving your settings you can test it:
 
