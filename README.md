@@ -15,6 +15,11 @@ git clone https://github.com/Keyj33k/ReverseShell.git
 - IMPORTANT: You need to change the ipv4 address in the script:
 ---
 ![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revsh.png?raw=true)
+---
+- OPTIONAL: You can make a executable using command:
+```
+pyinstaller --onefile reverseshell.py
+```
 
 ### After saving your settings you can test it:
 
