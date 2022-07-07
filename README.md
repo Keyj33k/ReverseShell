@@ -59,7 +59,7 @@ Note:
 ---
 ---
   
-- Tested on 5.17.0-kali3-amd64, 5.15.0-39-generic-Ubuntu
+- Tested on 5.17.0-kali3-amd64, 5.15.0-40-generic-Ubuntu
   
 ---
 
