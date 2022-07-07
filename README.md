@@ -20,6 +20,10 @@ git clone https://github.com/Keyj33k/ReverseShell.git
 ```
 pyinstaller --onefile reverseshell.py
 ```
+- PyInstaller command not found?:
+```
+pip install pyinstaller
+```
 
 ### After saving your settings you can test it:
 
