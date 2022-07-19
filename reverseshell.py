@@ -107,5 +107,4 @@ if __name__ == "__main__":
 
     except ConnectionRefusedError:
         print(f"{w}[{o}-{w}] Connection failed: server may be offline?")
-
         exit(1)
