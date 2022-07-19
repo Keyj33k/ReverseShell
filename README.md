@@ -14,7 +14,7 @@ git clone https://github.com/Keyj33k/ReverseShell.git
 
 - IMPORTANT: You need to change the ipv4 address in the script:
 ---
-![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revsh.png?raw=true)
+![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revshell.png?raw=true)
 ---
 - IMPORTANT: Use this command to install the requirements:
 ```
