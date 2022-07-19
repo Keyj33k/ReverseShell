@@ -44,7 +44,7 @@ sudo apt-get install -y netcat
 
 - On the victim machine:
 ```
-python3 reverseshell.py 
+./reverseshell
 ```
 # Explained:
 
