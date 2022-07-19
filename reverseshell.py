@@ -19,7 +19,7 @@ except ImportError:
 #   Author  :   Keyjeek                   #
 #   Contact :   nomotikag33n@gmail.com    #
 #   Github  :   @Keyj33k                  #
-#   Version :   1.0.6                     #
+#   Version :   1.0.7                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
@@ -104,7 +104,6 @@ if __name__ == "__main__":
         )
 
         remote_connection.shell()
-
     except ConnectionRefusedError:
         print(f"{w}[{o}-{w}] Connection failed: server may be offline?")
         exit(1)
