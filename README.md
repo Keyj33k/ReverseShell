@@ -1,9 +1,11 @@
-# ReverseShell | Written In <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python Badge"/></a>
-- A python3 reverseshell.
+![version](https://img.shields.io/badge/Version-1.0.7-informational?style=flat&logo=&logoColor=white&color=red) ![stars](https://img.shields.io/github/stars/Keyj33k/ReverseShell?style=social) ![forks](https://img.shields.io/github/forks/Keyj33k/ReverseShell?label=Forks&logo=&logoColor=white&color=blue) ![languages](https://img.shields.io/github/languages/count/Keyj33k/ReverseShell?style=social&logo=&logoColor=white&color=blue) ![issues](https://img.shields.io/github/last-commit/Keyj33k/ReverseShell?style=flat&logo=&logoColor=white&color=blue) ![platform](https://img.shields.io/badge/Platform-Linux-informational?style=flat&logo=&logoColor=white&color=green) 
+
+# Reverse Shell :snake:
+- A python3 tcp reverse shell.
 
 ![revsh](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
-## How to use this reverseshell? :snake:
+### :question: How to use this reverseshell? 
 
 - 1 ) Clone the repo:
 ```
