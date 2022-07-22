@@ -21,13 +21,13 @@ git clone https://github.com/Keyj33k/ReverseShell.git
 ```
 cd ReverseShell
 ```
-- You will find a file called >> reverseshell.py:
+- You will find a file called reverseshell.py:
 
 ### :wrench: You need to change the ipv4 address in the script:
 ---
 ![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revshell.png?raw=true)
 ---
-- 3 ) This Reverse Shell needs requirements you need to install:
+- 3 ) This reverse shell needs requirements you need to install:
 ```
 pip install -r requirements.txt
 ```
