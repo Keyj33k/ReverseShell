@@ -3,7 +3,7 @@
 
 ![revsh](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
 
-## How to use this reverseshell?:snake:
+## How to use this reverseshell? :snake:
 
 - 1 ) Clone the repo:
 ```
@@ -15,7 +15,7 @@ cd ReverseShell
 ```
 - You will find a file called >> reverseshell.py:
 
-### You need to change the ipv4 address in the script:
+### :wrench: You need to change the ipv4 address in the script:
 ---
 ![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revshell.png?raw=true)
 ---
@@ -31,7 +31,7 @@ pyinstaller --onefile reverseshell.py
 ```
 pip install pyinstaller
 ```
-### If the steps above are done:
+### :sparkles: If the steps above are done:
 
 - On the attacker machine:
 ```
@@ -46,11 +46,11 @@ sudo apt-get install -y netcat
 ```
 ./reverseshell
 ```
-# Explained:
+### :gem: Explained:
 
 ![listener](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/reverseshell.jpeg)
 
-Note:
+# :warning: Note:
 - This tool is for educational and ethical purposes only. 
 - I'm not responsible for your actions. 
 - Don't hack anyone without their permissions.
@@ -61,7 +61,7 @@ Note:
 ---
 ---
   
-- Tested on 5.17.0-kali3-amd64, 5.15.0-40-generic-Ubuntu
+- Tested on 5.18.0-kali3-amd64, 5.15.0-41-generic-Ubuntu
   
 ---
 
