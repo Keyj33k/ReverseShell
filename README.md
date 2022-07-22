@@ -11,6 +11,8 @@
 
 ### :question: How to use this reverseshell? 
 
+---
+
 - 1 ) Clone the repo:
 ```
 git clone https://github.com/Keyj33k/ReverseShell.git
@@ -39,6 +41,8 @@ pip install pyinstaller
 ```
 ### :sparkles: If the steps above are done:
 
+---
+
 - On the attacker machine:
 ```
 nc -lnvp 5003
@@ -54,6 +58,8 @@ sudo apt-get install -y netcat
 ```
 ### :gem: Explained:
 
+---
+
 ![listener](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/reverseshell.jpeg)
 
 # :warning: Note:
@@ -62,9 +68,6 @@ sudo apt-get install -y netcat
 - Don't hack anyone without their permissions.
 - With great force follows great responsibility.
 
----
-![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
----
 ---
   
 - Tested on 5.18.0-kali3-amd64, 5.15.0-41-generic-Ubuntu
