@@ -7,7 +7,7 @@
 
 ---
 
-![revsh](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/backd_profile.jpeg)
+![revsh](https://github.com/Keyj33k/ReverseShell/blob/main/img/backd_profile.jpeg?raw=true)
 
 ### :question: How to use this reverseshell? 
 
@@ -25,7 +25,7 @@ cd ReverseShell
 
 ### :wrench: You need to change the ipv4 address in the script:
 ---
-![exa](https://github.com/Keyj33k/profiles/blob/main/profile/revshell.png?raw=true)
+![exa](https://github.com/Keyj33k/ReverseShell/blob/main/img/revshell.png?raw=true)
 ---
 - 3 ) This reverse shell needs requirements you need to install:
 ```
@@ -60,7 +60,7 @@ sudo apt-get install -y netcat
 
 ---
 
-![listener](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/reverseshell.jpeg)
+![exp](https://github.com/Keyj33k/ReverseShell/blob/main/img/reverseshell.jpeg?raw=true)
 
 # :warning: Note:
 - This tool is for educational and ethical purposes only. 
